@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conecta Cidadão - Sistema Completo</title>
+    <title>Conecta Cidadão - Plataforma Cívica</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
@@ -62,7 +62,6 @@
             flex-direction: column;
         }
 
-        /* Header Moderno */
         .header {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             color: var(--white);
@@ -210,7 +209,6 @@
             font-weight: 600;
         }
 
-        /* Main Container */
         .main-container {
             flex: 1;
             max-width: 1400px;
@@ -219,7 +217,6 @@
             width: 100%;
         }
 
-        /* Botões */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -316,7 +313,6 @@
             background: #e67e22;
         }
 
-        /* Cards e Containers */
         .screen {
             display: none;
             animation: fadeIn 0.3s ease;
@@ -348,7 +344,6 @@
             color: var(--gray-600);
         }
 
-        /* Grid System */
         .grid {
             display: grid;
             gap: 1.5rem;
@@ -370,7 +365,6 @@
             .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
         }
 
-        /* Cards Modernos */
         .card {
             background: var(--white);
             border-radius: var(--radius-lg);
@@ -411,7 +405,6 @@
             color: var(--primary);
         }
 
-        /* Stats Cards */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -454,7 +447,6 @@
             opacity: 0.2;
         }
 
-        /* Tabelas Modernas */
         .table-container {
             background: var(--white);
             border-radius: var(--radius-lg);
@@ -489,7 +481,6 @@
             background-color: var(--gray-100);
         }
 
-        /* Badges */
         .badge {
             display: inline-flex;
             align-items: center;
@@ -525,7 +516,6 @@
             color: var(--secondary);
         }
 
-        /* Formulários Modernos */
         .form-container {
             max-width: 800px;
             margin: 0 auto;
@@ -569,7 +559,6 @@
             gap: 1rem;
         }
 
-        /* Mapa Container */
         .map-container {
             background: linear-gradient(135deg, var(--primary-light), var(--primary));
             border-radius: var(--radius-lg);
@@ -596,7 +585,6 @@
             box-shadow: var(--shadow-lg);
         }
 
-        /* Modal */
         .modal {
             position: fixed;
             top: 0;
@@ -652,7 +640,6 @@
             color: var(--danger);
         }
 
-        /* Ranking */
         .ranking-list {
             list-style: none;
         }
@@ -736,7 +723,6 @@
             font-size: 1.25rem;
         }
 
-        /* Timeline */
         .timeline {
             position: relative;
             padding-left: 2rem;
@@ -763,14 +749,12 @@
             border: 2px solid var(--white);
         }
 
-        /* Gráficos */
         .chart-container {
             height: 300px;
             position: relative;
             margin: 1rem 0;
         }
 
-        /* Notificações */
         .notification-badge {
             position: relative;
             display: inline-block;
@@ -791,7 +775,6 @@
             justify-content: center;
         }
 
-        /* Footer Moderno */
         .footer {
             background: var(--primary-dark);
             color: var(--white);
@@ -847,7 +830,6 @@
             color: var(--gray-500);
         }
 
-        /* Utilitários */
         .hidden {
             display: none !important;
         }
@@ -866,7 +848,6 @@
         .mt-3 { margin-top: 1.5rem; }
         .mt-4 { margin-top: 2rem; }
 
-        /* Loading Spinner */
         .spinner {
             width: 40px;
             height: 40px;
@@ -880,7 +861,6 @@
             to { transform: rotate(360deg); }
         }
 
-        /* Responsividade */
         @media (max-width: 768px) {
             .header-container {
                 flex-direction: column;
@@ -901,10 +881,527 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .profile-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            color: var(--white);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,0 100,0 100,100" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+            opacity: 0.1;
+        }
+
+        .profile-info {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .profile-avatar-large {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--white);
+            border: 4px solid rgba(255,255,255,0.3);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .profile-details {
+            flex: 1;
+        }
+
+        .profile-name {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-badges {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .profile-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 0.25rem 1rem;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .profile-stats {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .profile-stat-item {
+            text-align: center;
+        }
+
+        .profile-stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .profile-stat-label {
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+
+        .profile-edit-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            backdrop-filter: blur(5px);
+            transition: all 0.2s ease;
+            z-index: 2;
+        }
+
+        .profile-edit-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .achievement-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem 1rem;
+            text-align: center;
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s ease;
+        }
+
+        .achievement-card.locked {
+            opacity: 0.5;
+            filter: grayscale(0.5);
+        }
+
+        .achievement-card.unlocked {
+            border-color: var(--secondary);
+            box-shadow: 0 4px 12px rgba(0,168,150,0.2);
+        }
+
+        .achievement-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .achievement-desc {
+            font-size: 0.75rem;
+            color: var(--gray-600);
+        }
+
+        .achievement-progress {
+            margin-top: 0.5rem;
+            height: 4px;
+            background: var(--gray-200);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .achievement-progress-bar {
+            height: 100%;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .security-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .security-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: var(--gray-100);
+            border-radius: var(--radius-md);
+        }
+
+        .security-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .security-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary);
+            font-size: 1.25rem;
+        }
+
+        .toggle-switch {
+            width: 50px;
+            height: 24px;
+            background: var(--gray-300);
+            border-radius: 12px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-switch.active {
+            background: var(--secondary);
+        }
+
+        .toggle-switch::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            top: 2px;
+            left: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-switch.active::after {
+            left: 28px;
+        }
+
+        .notification-settings {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .notification-option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .notification-option:last-child {
+            border-bottom: none;
+        }
+
+        .notification-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .notification-label i {
+            color: var(--secondary);
+            width: 20px;
+        }
+
+        .connected-accounts {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .account-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--gray-100);
+            border-radius: var(--radius-md);
+        }
+
+        .account-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .account-info {
+            flex: 1;
+        }
+
+        .account-name {
+            font-weight: 600;
+        }
+
+        .account-email {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+
+        .account-status {
+            color: var(--success);
+            font-size: 0.875rem;
+        }
+
+        .data-export-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .export-card {
+            background: var(--gray-100);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .export-card:hover {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .export-card i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+        }
+
+        .export-card:hover i {
+            color: white;
+        }
+
+        .activity-calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 0.25rem;
+            margin-top: 1rem;
+        }
+
+        .calendar-day {
+            aspect-ratio: 1;
+            background: var(--gray-200);
+            border-radius: var(--radius-sm);
+            position: relative;
+        }
+
+        .calendar-day[data-level="1"] { background: rgba(0,168,150,0.2); }
+        .calendar-day[data-level="2"] { background: rgba(0,168,150,0.4); }
+        .calendar-day[data-level="3"] { background: rgba(0,168,150,0.6); }
+        .calendar-day[data-level="4"] { background: rgba(0,168,150,0.8); }
+        .calendar-day[data-level="5"] { background: var(--secondary); }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .badge-item {
+            width: 80px;
+            text-align: center;
+        }
+
+        .badge-image {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--secondary-light), var(--secondary));
+            border-radius: 50%;
+            margin: 0 auto 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .badge-item .badge-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .badge-item .badge-date {
+            font-size: 0.625rem;
+            color: var(--gray-600);
+        }
+
+        .progress-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: conic-gradient(var(--secondary) 0deg 270deg, var(--gray-200) 270deg 360deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .progress-circle::after {
+            content: '';
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .progress-value {
+            position: relative;
+            z-index: 1;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .tab-container {
+            display: flex;
+            gap: 0.5rem;
+            border-bottom: 2px solid var(--gray-200);
+            margin-bottom: 1.5rem;
+        }
+
+        .tab {
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -2px;
+            font-weight: 600;
+            color: var(--gray-600);
+            transition: all 0.2s ease;
+        }
+
+        .tab:hover {
+            color: var(--secondary);
+        }
+
+        .tab.active {
+            color: var(--secondary);
+            border-bottom-color: var(--secondary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .qr-code {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(45deg, var(--gray-900), var(--gray-700));
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            border-radius: var(--radius-lg);
+        }
+
+        .level-progress {
+            height: 8px;
+            background: var(--gray-200);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+
+        .level-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+            border-radius: 4px;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .friends-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .friend-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.75rem;
+            background: var(--gray-100);
+            border-radius: var(--radius-md);
+        }
+
+        .friend-avatar {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--secondary-light), var(--secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+        }
+
+        .friend-info {
+            flex: 1;
+        }
+
+        .friend-name {
+            font-weight: 600;
+        }
+
+        .friend-points {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+
+        .friend-action {
+            color: var(--secondary);
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <div class="header-container">
             <div class="logo" onclick="showScreen('home')">
@@ -943,6 +1440,9 @@
                     <a href="#" class="dropdown-item" id="profile-link">
                         <i class="fas fa-user"></i> Perfil
                     </a>
+                    <a href="#" class="dropdown-item" id="achievements-link">
+                        <i class="fas fa-trophy"></i> Conquistas
+                    </a>
                     <a href="#" class="dropdown-item" id="notifications-link">
                         <i class="fas fa-bell"></i> Notificações
                         <span class="notification-count" style="margin-left: auto;">3</span>
@@ -958,9 +1458,7 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="main-container">
-        <!-- Tela Inicial -->
         <div id="home" class="screen active">
             <div class="page-header">
                 <h1 class="page-title">Bem-vindo ao Conecta Cidadão</h1>
@@ -1113,7 +1611,6 @@
             </div>
         </div>
 
-        <!-- Quem Somos -->
         <div id="about" class="screen">
             <div class="page-header">
                 <h1 class="page-title">Quem Somos</h1>
@@ -1180,7 +1677,6 @@
             </div>
         </div>
 
-        <!-- Problemática -->
         <div id="problem" class="screen">
             <div class="page-header">
                 <h1 class="page-title">A Problemática</h1>
@@ -1278,7 +1774,6 @@
             </div>
         </div>
 
-        <!-- Autenticação -->
         <div id="auth-general" class="screen">
             <div class="login-container" style="max-width: 500px; margin: 0 auto;">
                 <div class="form-container">
@@ -1364,7 +1859,6 @@
             </div>
         </div>
 
-        <!-- Solicitação de Parceria -->
         <div id="partner-request" class="screen">
             <div class="page-header">
                 <h1 class="page-title">Seja um Parceiro</h1>
@@ -1472,7 +1966,6 @@
             </div>
         </div>
 
-        <!-- Dashboard do Usuário -->
         <div id="user-dashboard" class="screen">
             <div class="page-header">
                 <h1 class="page-title">Olá, <span id="user-name-display">Cidadão</span>!</h1>
@@ -1643,7 +2136,6 @@
             </div>
         </div>
 
-        <!-- Dashboard do Parceiro -->
         <div id="partner-dashboard" class="screen">
             <div class="page-header">
                 <h1 class="page-title">Dashboard da Empresa</h1>
@@ -1771,7 +2263,6 @@
             </div>
         </div>
 
-        <!-- Dashboard Institucional -->
         <div id="institution-dashboard" class="screen">
             <div class="page-header">
                 <h1 class="page-title">Painel da Prefeitura</h1>
@@ -1927,7 +2418,6 @@
             </div>
         </div>
 
-        <!-- Dashboard Admin -->
         <div id="admin-dashboard" class="screen">
             <div class="page-header">
                 <h1 class="page-title">Painel Administrativo</h1>
@@ -2157,207 +2647,804 @@
                 </div>
             </div>
         </div>
+
+        <!-- NOVA TELA DE PERFIL -->
+        <div id="profile" class="screen">
+            <div class="profile-header">
+                <div class="profile-cover"></div>
+                <button class="profile-edit-btn" onclick="editProfile()">
+                    <i class="fas fa-edit"></i> Editar Perfil
+                </button>
+                <div class="profile-info">
+                    <div class="profile-avatar-large" id="profile-avatar">JS</div>
+                    <div class="profile-details">
+                        <h1 class="profile-name" id="profile-fullname">João Silva</h1>
+                        <div class="profile-badges">
+                            <span class="profile-badge"><i class="fas fa-map-marker-alt"></i> São Paulo, SP</span>
+                            <span class="profile-badge"><i class="fas fa-calendar"></i> Membro desde 2023</span>
+                            <span class="profile-badge"><i class="fas fa-certificate"></i> Verificado</span>
+                        </div>
+                        <div class="profile-stats">
+                            <div class="profile-stat-item">
+                                <div class="profile-stat-value" id="profile-points">1,450</div>
+                                <div class="profile-stat-label">Pontos</div>
+                            </div>
+                            <div class="profile-stat-item">
+                                <div class="profile-stat-value" id="profile-occurrences">12</div>
+                                <div class="profile-stat-label">Ocorrências</div>
+                            </div>
+                            <div class="profile-stat-item">
+                                <div class="profile-stat-value" id="profile-rank">8º</div>
+                                <div class="profile-stat-label">Ranking</div>
+                            </div>
+                            <div class="profile-stat-item">
+                                <div class="profile-stat-value" id="profile-level">5</div>
+                                <div class="profile-stat-label">Nível</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-container">
+                <div class="tab active" onclick="switchProfileTab('overview')">Visão Geral</div>
+                <div class="tab" onclick="switchProfileTab('achievements')">Conquistas</div>
+                <div class="tab" onclick="switchProfileTab('activity')">Atividade</div>
+                <div class="tab" onclick="switchProfileTab('badges')">Medalhas</div>
+                <div class="tab" onclick="switchProfileTab('security')">Segurança</div>
+            </div>
+
+            <div id="profile-overview" class="tab-content active">
+                <div class="grid grid-3 mb-4">
+                    <div class="card">
+                        <h3 class="card-title mb-2">Progresso para Nível 6</h3>
+                        <div class="level-progress">
+                            <div class="level-progress-bar" style="width: 65%;"></div>
+                        </div>
+                        <p>Mais 350 pontos para subir de nível</p>
+                        <div class="progress-circle" style="margin: 1rem auto;">
+                            <span class="progress-value">65%</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title mb-2">Últimas Conquistas</h3>
+                        <div class="achievement-grid">
+                            <div class="achievement-card unlocked">
+                                <div class="achievement-icon"><i class="fas fa-seedling"></i></div>
+                                <div class="achievement-title">Primeiro Reporte</div>
+                                <div class="achievement-desc">Reportou seu 1º problema</div>
+                            </div>
+                            <div class="achievement-card unlocked">
+                                <div class="achievement-icon"><i class="fas fa-star"></i></div>
+                                <div class="achievement-title">10 Reportes</div>
+                                <div class="achievement-desc">Atingiu 10 ocorrências</div>
+                            </div>
+                            <div class="achievement-card locked">
+                                <div class="achievement-icon"><i class="fas fa-crown"></i></div>
+                                <div class="achievement-title">Top 5</div>
+                                <div class="achievement-desc">Chegue ao top 5 do ranking</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title mb-2">Conexões</h3>
+                        <div class="friends-list">
+                            <div class="friend-item">
+                                <div class="friend-avatar">MS</div>
+                                <div class="friend-info">
+                                    <div class="friend-name">Maria Santos</div>
+                                    <div class="friend-points">2,450 pts</div>
+                                </div>
+                                <i class="fas fa-comment friend-action"></i>
+                            </div>
+                            <div class="friend-item">
+                                <div class="friend-avatar">PO</div>
+                                <div class="friend-info">
+                                    <div class="friend-name">Pedro Oliveira</div>
+                                    <div class="friend-points">2,120 pts</div>
+                                </div>
+                                <i class="fas fa-comment friend-action"></i>
+                            </div>
+                            <div class="friend-item">
+                                <div class="friend-avatar">AC</div>
+                                <div class="friend-info">
+                                    <div class="friend-name">Ana Costa</div>
+                                    <div class="friend-points">1,980 pts</div>
+                                </div>
+                                <i class="fas fa-comment friend-action"></i>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-sm" style="margin-top: 1rem;" onclick="showFriends()">
+                            Ver todos os amigos
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h3 class="card-title mb-2">Histórico de Atividade</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-marker" style="background: var(--success);"></div>
+                                <div><strong>Ocorrência resolvida</strong> - Buraco na Rua das Flores</div>
+                                <small>Há 2 dias</small>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker" style="background: var(--warning);"></div>
+                                <div><strong>Nova ocorrência</strong> - Iluminação na Av. Central</div>
+                                <small>Há 5 dias</small>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker" style="background: var(--info);"></div>
+                                <div><strong>Benefício resgatado</strong> - Desconto 20% na Loja</div>
+                                <small>Há 1 semana</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title mb-2">Informações Pessoais</h3>
+                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                            <div><strong><i class="fas fa-envelope"></i> E-mail:</strong> joao.silva@email.com</div>
+                            <div><strong><i class="fas fa-phone"></i> Telefone:</strong> (11) 99999-9999</div>
+                            <div><strong><i class="fas fa-map-marker-alt"></i> Endereço:</strong> Rua das Flores, 123</div>
+                            <div><strong><i class="fas fa-birthday-cake"></i> Data de Nascimento:</strong> 15/03/1990</div>
+                            <div><strong><i class="fas fa-id-card"></i> CPF:</strong> ***.***.789-10</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="profile-achievements" class="tab-content">
+                <div class="card">
+                    <h3 class="card-title mb-2">Todas as Conquistas</h3>
+                    <div class="achievement-grid">
+                        <div class="achievement-card unlocked">
+                            <div class="achievement-icon"><i class="fas fa-seedling"></i></div>
+                            <div class="achievement-title">Primeiro Passo</div>
+                            <div class="achievement-desc">Reporte seu primeiro problema</div>
+                            <div class="achievement-progress">
+                                <div class="achievement-progress-bar" style="width: 100%;"></div>
+                            </div>
+                            <small>Concluído em 15/10/2023</small>
+                        </div>
+
+                        <div class="achievement-card unlocked">
+                            <div class="achievement-icon"><i class="fas fa-star"></i></div>
+                            <div class="achievement-title">Cidadão Ativo</div>
+                            <div class="achievement-desc">10 ocorrências reportadas</div>
+                            <div class="achievement-progress">
+                                <div class="achievement-progress-bar" style="width: 100%;"></div>
+                            </div>
+                            <small>Concluído em 20/10/2023</small>
+                        </div>
+
+                        <div class="achievement-card unlocked">
+                            <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                            <div class="achievement-title">Solucionador</div>
+                            <div class="achievement-desc">5 problemas resolvidos</div>
+                            <div class="achievement-progress">
+                                <div class="achievement-progress-bar" style="width: 100%;"></div>
+                            </div>
+                            <small>Concluído em 18/10/2023</small>
+                        </div>
+
+                        <div class="achievement-card" style="border-color: var(--warning);">
+                            <div class="achievement-icon"><i class="fas fa-fire"></i></div>
+                            <div class="achievement-title">Em Chamas</div>
+                            <div class="achievement-desc">7 dias consecutivos de atividade</div>
+                            <div class="achievement-progress">
+                                <div class="achievement-progress-bar" style="width: 71%;"></div>
+                            </div>
+                            <small>5/7 dias</small>
+                        </div>
+
+                        <div class="achievement-card">
+                            <div class="achievement-icon"><i class="fas fa-crown"></i></div>
+                            <div class="achievement-title">Top 3</div>
+                            <div class="achievement-desc">Alcance o top 3 do ranking</div>
+                            <div class="achievement-progress">
+                                <div class="achievement-progress-bar" style="width: 0%;"></div>
+                            </div>
+                            <small>8º lugar atual</small>
+                        </div>
+
+                        <div class="achievement-card">
+                            <div class="achievement-icon"><i class="fas fa-handshake"></i></div>
+                            <div class="achievement-title">Parceiro</div>
+                            <div class="achievement-desc">Indique 5 amigos para a plataforma</div>
+                            <div class="achievement-progress">
+                                <div class="achievement-progress-bar" style="width: 40%;"></div>
+                            </div>
+                            <small>2/5 amigos</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="profile-activity" class="tab-content">
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h3 class="card-title mb-2">Calendário de Atividade</h3>
+                        <div class="activity-calendar" id="activity-calendar"></div>
+                        <p class="text-center mt-2"><small>Últimos 28 dias de atividade</small></p>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title mb-2">Estatísticas Detalhadas</h3>
+                        <div class="chart-container" style="height: 200px;">
+                            <canvas id="activity-chart"></canvas>
+                        </div>
+                        <div style="margin-top: 1rem;">
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Média de ocorrências:</span>
+                                <strong>3.2 por semana</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Melhor dia:</span>
+                                <strong>Segunda-feira</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Total de pontos:</span>
+                                <strong>1,450</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <h3 class="card-title mb-2">Histórico Completo</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Ação</th>
+                                <th>Detalhes</th>
+                                <th>Pontos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>22/10/2023</td>
+                                <td>Nova ocorrência</td>
+                                <td>Buraco na Rua das Flores</td>
+                                <td>+50</td>
+                            </tr>
+                            <tr>
+                                <td>21/10/2023</td>
+                                <td>Benefício resgatado</td>
+                                <td>Desconto 20% - Loja Oficial</td>
+                                <td>-300</td>
+                            </tr>
+                            <tr>
+                                <td>20/10/2023</td>
+                                <td>Ocorrência resolvida</td>
+                                <td>Iluminação na Av. Central</td>
+                                <td>+100</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="profile-badges" class="tab-content">
+                <div class="card">
+                    <h3 class="card-title mb-2">Medalhas Conquistadas</h3>
+                    <div class="badge-container">
+                        <div class="badge-item">
+                            <div class="badge-image"><i class="fas fa-seedling"></i></div>
+                            <div class="badge-title">Cidadão Iniciante</div>
+                            <div class="badge-date">15/10/2023</div>
+                        </div>
+                        <div class="badge-item">
+                            <div class="badge-image"><i class="fas fa-star"></i></div>
+                            <div class="badge-title">10 Reportes</div>
+                            <div class="badge-date">20/10/2023</div>
+                        </div>
+                        <div class="badge-item">
+                            <div class="badge-image"><i class="fas fa-check-circle"></i></div>
+                            <div class="badge-title">Primeira Resolução</div>
+                            <div class="badge-date">18/10/2023</div>
+                        </div>
+                        <div class="badge-item">
+                            <div class="badge-image"><i class="fas fa-clock"></i></div>
+                            <div class="badge-title">1 Mês de Membresia</div>
+                            <div class="badge-date">15/11/2023</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <h3 class="card-title mb-2">Próximas Medalhas</h3>
+                    <div class="badge-container">
+                        <div class="badge-item" style="opacity: 0.5;">
+                            <div class="badge-image"><i class="fas fa-crown"></i></div>
+                            <div class="badge-title">Top 5 Ranking</div>
+                            <div class="badge-date">Faltam 3 posições</div>
+                        </div>
+                        <div class="badge-item" style="opacity: 0.5;">
+                            <div class="badge-image"><i class="fas fa-users"></i></div>
+                            <div class="badge-title">Indique 5 Amigos</div>
+                            <div class="badge-date">2/5 concluídos</div>
+                        </div>
+                        <div class="badge-item" style="opacity: 0.5;">
+                            <div class="badge-image"><i class="fas fa-rocket"></i></div>
+                            <div class="badge-title">50 Ocorrências</div>
+                            <div class="badge-date">12/50 concluídos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="profile-security" class="tab-content">
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h3 class="card-title mb-2">Segurança da Conta</h3>
+                        <div class="security-section">
+                            <div class="security-item">
+                                <div class="security-info">
+                                    <div class="security-icon"><i class="fas fa-shield-alt"></i></div>
+                                    <div>
+                                        <strong>Autenticação de Dois Fatores</strong>
+                                        <p style="font-size: 0.875rem; color: var(--gray-600);">Adicione uma camada extra de segurança</p>
+                                    </div>
+                                </div>
+                                <div class="toggle-switch" onclick="toggle2FA(this)"></div>
+                            </div>
+
+                            <div class="security-item">
+                                <div class="security-info">
+                                    <div class="security-icon"><i class="fas fa-mobile-alt"></i></div>
+                                    <div>
+                                        <strong>Verificação por SMS</strong>
+                                        <p style="font-size: 0.875rem; color: var(--gray-600);">Receba códigos via mensagem de texto</p>
+                                    </div>
+                                </div>
+                                <div class="toggle-switch active" onclick="toggleSMS(this)"></div>
+                            </div>
+
+                            <div class="security-item">
+                                <div class="security-info">
+                                    <div class="security-icon"><i class="fas fa-key"></i></div>
+                                    <div>
+                                        <strong>Alterar Senha</strong>
+                                        <p style="font-size: 0.875rem; color: var(--gray-600);">Última alteração há 30 dias</p>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-sm" onclick="changePassword()">Alterar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title mb-2">Notificações</h3>
+                        <div class="notification-settings">
+                            <div class="notification-option">
+                                <div class="notification-label">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Notificações por E-mail</span>
+                                </div>
+                                <div class="toggle-switch active" onclick="toggleNotification('email', this)"></div>
+                            </div>
+                            <div class="notification-option">
+                                <div class="notification-label">
+                                    <i class="fas fa-bell"></i>
+                                    <span>Notificações Push</span>
+                                </div>
+                                <div class="toggle-switch active" onclick="toggleNotification('push', this)"></div>
+                            </div>
+                            <div class="notification-option">
+                                <div class="notification-label">
+                                    <i class="fas fa-sms"></i>
+                                    <span>Notificações por SMS</span>
+                                </div>
+                                <div class="toggle-switch" onclick="toggleNotification('sms', this)"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-2 mt-4">
+                    <div class="card">
+                        <h3 class="card-title mb-2">Contas Conectadas</h3>
+                        <div class="connected-accounts">
+                            <div class="account-item">
+                                <div class="account-icon"><i class="fab fa-google" style="color: #DB4437;"></i></div>
+                                <div class="account-info">
+                                    <div class="account-name">Google</div>
+                                    <div class="account-email">joao.silva@gmail.com</div>
+                                </div>
+                                <div class="account-status">Conectado</div>
+                            </div>
+                            <div class="account-item">
+                                <div class="account-icon"><i class="fab fa-facebook" style="color: #4267B2;"></i></div>
+                                <div class="account-info">
+                                    <div class="account-name">Facebook</div>
+                                    <div class="account-email">joao.silva</div>
+                                </div>
+                                <div class="account-status">Conectado</div>
+                            </div>
+                            <div class="account-item">
+                                <div class="account-icon"><i class="fab fa-apple" style="color: #000;"></i></div>
+                                <div class="account-info">
+                                    <div class="account-name">Apple</div>
+                                    <div class="account-email">joao.silva@icloud.com</div>
+                                </div>
+                                <div class="account-status">Não conectado</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title mb-2">Exportar Dados</h3>
+                        <p class="mb-2">Baixe uma cópia de todos os seus dados</p>
+                        <div class="data-export-options">
+                            <div class="export-card" onclick="exportData('csv')">
+                                <i class="fas fa-file-csv"></i>
+                                <h4>CSV</h4>
+                                <small>Planilhas</small>
+                            </div>
+                            <div class="export-card" onclick="exportData('pdf')">
+                                <i class="fas fa-file-pdf"></i>
+                                <h4>PDF</h4>
+                                <small>Documento</small>
+                            </div>
+                            <div class="export-card" onclick="exportData('json')">
+                                <i class="fas fa-file-code"></i>
+                                <h4>JSON</h4>
+                                <small>Dados brutos</small>
+                            </div>
+                            <div class="export-card" onclick="exportData('all')">
+                                <i class="fas fa-archive"></i>
+                                <h4>Todos</h4>
+                                <small>Pacote completo</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mt-4" style="border-color: var(--danger);">
+                    <h3 class="card-title mb-2" style="color: var(--danger);">Zona de Perigo</h3>
+                    <div style="display: flex; gap: 1rem; align-items: center; justify-content: space-between;">
+                        <div>
+                            <strong>Desativar Conta</strong>
+                            <p style="color: var(--gray-600);">Esta ação é irreversível. Todos os seus dados serão perdidos.</p>
+                        </div>
+                        <button class="btn btn-danger" onclick="deactivateAccount()">Desativar Conta</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NOVA TELA DE CONFIGURAÇÕES -->
+        <div id="settings" class="screen">
+            <div class="page-header">
+                <h1 class="page-title">Configurações</h1>
+                <p class="page-subtitle">Personalize sua experiência no Conecta Cidadão</p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="card" onclick="showSetting('account')">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fas fa-user-circle"></i></div>
+                        <h3 class="card-title">Conta</h3>
+                    </div>
+                    <p>Gerencie suas informações pessoais e preferências da conta</p>
+                </div>
+
+                <div class="card" onclick="showSetting('notifications')">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fas fa-bell"></i></div>
+                        <h3 class="card-title">Notificações</h3>
+                    </div>
+                    <p>Configure como e quando receber alertas e atualizações</p>
+                </div>
+
+                <div class="card" onclick="showSetting('privacy')">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fas fa-lock"></i></div>
+                        <h3 class="card-title">Privacidade</h3>
+                    </div>
+                    <p>Controle quem pode ver suas informações e atividades</p>
+                </div>
+
+                <div class="card" onclick="showSetting('appearance')">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fas fa-palette"></i></div>
+                        <h3 class="card-title">Aparência</h3>
+                    </div>
+                    <p>Personalize cores, tema e visual da plataforma</p>
+                </div>
+
+                <div class="card" onclick="showSetting('language')">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fas fa-language"></i></div>
+                        <h3 class="card-title">Idioma</h3>
+                    </div>
+                    <p>Escolha seu idioma preferido</p>
+                </div>
+
+                <div class="card" onclick="showSetting('accessibility')">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fas fa-universal-access"></i></div>
+                        <h3 class="card-title">Acessibilidade</h3>
+                    </div>
+                    <p>Opções para facilitar o uso da plataforma</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modais existentes -->
+        <div class="modal" id="new-occurrence-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Nova Ocorrência</h2>
+                    <button class="modal-close" onclick="closeModal('new-occurrence-modal')">&times;</button>
+                </div>
+                <form id="new-occurrence-form" onsubmit="handleNewOccurrence(event)">
+                    <div class="form-group">
+                        <label class="form-label">Tipo de Problema *</label>
+                        <select class="form-control" id="occurrence-type" required>
+                            <option value="">Selecione</option>
+                            <option value="buraco">Buraco na via</option>
+                            <option value="iluminacao">Iluminação pública</option>
+                            <option value="lixo">Lixo acumulado</option>
+                            <option value="drenagem">Problema de drenagem</option>
+                            <option value="acessibilidade">Falta de acessibilidade</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Local *</label>
+                        <input type="text" class="form-control" id="occurrence-location" placeholder="Endereço completo" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Latitude</label>
+                            <input type="text" class="form-control" id="occurrence-lat" value="-23.5505" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Longitude</label>
+                            <input type="text" class="form-control" id="occurrence-lng" value="-46.6333" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Descrição *</label>
+                        <textarea class="form-control" id="occurrence-description" rows="4" placeholder="Descreva o problema em detalhes..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Foto (opcional)</label>
+                        <input type="file" class="form-control" id="occurrence-photo" accept="image/*">
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i> Enviar Ocorrência
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal" id="new-benefit-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Novo Benefício</h2>
+                    <button class="modal-close" onclick="closeModal('new-benefit-modal')">&times;</button>
+                </div>
+                <form id="new-benefit-form" onsubmit="handleNewBenefit(event)">
+                    <div class="form-group">
+                        <label class="form-label">Título do Benefício *</label>
+                        <input type="text" class="form-control" id="benefit-title" placeholder="Ex: Desconto de 20%" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Descrição *</label>
+                        <textarea class="form-control" id="benefit-description" rows="3" placeholder="Descreva o benefício..." required></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Pontos necessários *</label>
+                            <input type="number" class="form-control" id="benefit-points" placeholder="500" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Quantidade disponível</label>
+                            <input type="number" class="form-control" id="benefit-quantity" placeholder="10">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Validade</label>
+                        <input type="date" class="form-control" id="benefit-expiry">
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-plus"></i> Criar Benefício
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal" id="map-modal">
+            <div class="modal-content" style="max-width: 1000px;">
+                <div class="modal-header">
+                    <h2>Mapa Interativo de Ocorrências</h2>
+                    <button class="modal-close" onclick="closeModal('map-modal')">&times;</button>
+                </div>
+                <div id="full-map" style="height: 500px; width: 100%;"></div>
+                <div style="margin-top: 1rem; display: flex; gap: 1rem; justify-content: center;">
+                    <button class="btn btn-primary" onclick="centerMapOnUser()">
+                        <i class="fas fa-location-dot"></i> Minha localização
+                    </button>
+                    <button class="btn btn-outline" onclick="filterMap('nearby')">
+                        <i class="fas fa-filter"></i> Filtrar próximos
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="ranking-modal">
+            <div class="modal-content" style="max-width: 800px;">
+                <div class="modal-header">
+                    <h2>Ranking Completo de Cidadãos</h2>
+                    <button class="modal-close" onclick="closeModal('ranking-modal')">&times;</button>
+                </div>
+                <div class="ranking-list" id="full-ranking-list">
+                    <div class="ranking-item current-user">
+                        <div class="ranking-position top-8">8º</div>
+                        <div class="ranking-avatar">JS</div>
+                        <div class="ranking-info">
+                            <div class="ranking-name">João Silva <span style="color: var(--secondary);">(Você)</span></div>
+                            <div class="ranking-details">12 ocorrências • 1,450 pontos</div>
+                        </div>
+                        <div class="ranking-points">1,450</div>
+                    </div>
+                    <div class="ranking-item">
+                        <div class="ranking-position top-1">1º</div>
+                        <div class="ranking-avatar">MS</div>
+                        <div class="ranking-info">
+                            <div class="ranking-name">Maria Santos</div>
+                            <div class="ranking-details">28 ocorrências • 2,450 pontos</div>
+                        </div>
+                        <div class="ranking-points">2,450</div>
+                    </div>
+                    <div class="ranking-item">
+                        <div class="ranking-position top-2">2º</div>
+                        <div class="ranking-avatar">PO</div>
+                        <div class="ranking-info">
+                            <div class="ranking-name">Pedro Oliveira</div>
+                            <div class="ranking-details">24 ocorrências • 2,120 pontos</div>
+                        </div>
+                        <div class="ranking-points">2,120</div>
+                    </div>
+                    <div class="ranking-item">
+                        <div class="ranking-position top-3">3º</div>
+                        <div class="ranking-avatar">AC</div>
+                        <div class="ranking-info">
+                            <div class="ranking-name">Ana Costa</div>
+                            <div class="ranking-details">21 ocorrências • 1,980 pontos</div>
+                        </div>
+                        <div class="ranking-points">1,980</div>
+                    </div>
+                    <div class="ranking-item">
+                        <div class="ranking-position">4º</div>
+                        <div class="ranking-avatar">LF</div>
+                        <div class="ranking-info">
+                            <div class="ranking-name">Lucas Ferreira</div>
+                            <div class="ranking-details">19 ocorrências • 1,870 pontos</div>
+                        </div>
+                        <div class="ranking-points">1,870</div>
+                    </div>
+                    <div class="ranking-item">
+                        <div class="ranking-position">5º</div>
+                        <div class="ranking-avatar">CM</div>
+                        <div class="ranking-info">
+                            <div class="ranking-name">Carla Mendes</div>
+                            <div class="ranking-details">18 ocorrências • 1,820 pontos</div>
+                        </div>
+                        <div class="ranking-points">1,820</div>
+                    </div>
+                    <div class="ranking-item">
+                        <div class="ranking-position">6º</div>
+                        <div class="ranking-avatar">RS</div>
+                        <div class="ranking-info">
+                            <div class="ranking-name">Roberto Santos</div>
+                            <div class="ranking-details">16 ocorrências • 1,650 pontos</div>
+                        </div>
+                        <div class="ranking-points">1,650</div>
+                    </div>
+                    <div class="ranking-item">
+                        <div class="ranking-position">7º</div>
+                        <div class="ranking-avatar">FP</div>
+                        <div class="ranking-info">
+                            <div class="ranking-name">Fernanda Paula</div>
+                            <div class="ranking-details">14 ocorrências • 1,520 pontos</div>
+                        </div>
+                        <div class="ranking-points">1,520</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="benefit-details-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Detalhes do Benefício</h2>
+                    <button class="modal-close" onclick="closeModal('benefit-details-modal')">&times;</button>
+                </div>
+                <div id="benefit-details-content"></div>
+            </div>
+        </div>
+
+        <!-- NOVOS Modais -->
+        <div class="modal" id="edit-profile-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Editar Perfil</h2>
+                    <button class="modal-close" onclick="closeModal('edit-profile-modal')">&times;</button>
+                </div>
+                <form id="edit-profile-form" onsubmit="saveProfile(event)">
+                    <div class="form-group">
+                        <label class="form-label">Nome Completo</label>
+                        <input type="text" class="form-control" id="edit-name" value="João Silva">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="edit-email" value="joao.silva@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Telefone</label>
+                        <input type="text" class="form-control" id="edit-phone" value="(11) 99999-9999">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Endereço</label>
+                        <input type="text" class="form-control" id="edit-address" value="Rua das Flores, 123">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Cidade</label>
+                        <input type="text" class="form-control" id="edit-city" value="São Paulo">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Estado</label>
+                        <select class="form-control" id="edit-state">
+                            <option value="SP" selected>São Paulo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="ES">Espírito Santo</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Data de Nascimento</label>
+                        <input type="date" class="form-control" id="edit-birth" value="1990-03-15">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Biografia</label>
+                        <textarea class="form-control" id="edit-bio" rows="3">Cidadão engajado em melhorar minha cidade através da participação ativa.</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Foto de Perfil</label>
+                        <input type="file" class="form-control" id="edit-avatar" accept="image/*">
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-save"></i> Salvar Alterações
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal" id="qr-code-modal">
+            <div class="modal-content" style="text-align: center;">
+                <div class="modal-header">
+                    <h2>Meu QR Code</h2>
+                    <button class="modal-close" onclick="closeModal('qr-code-modal')">&times;</button>
+                </div>
+                <div class="qr-code">
+                    <i class="fas fa-qrcode"></i>
+                </div>
+                <p>Escaneie para adicionar como amigo</p>
+                <button class="btn btn-primary" onclick="downloadQRCode()">
+                    <i class="fas fa-download"></i> Baixar QR Code
+                </button>
+            </div>
+        </div>
     </main>
 
-    <!-- Modais -->
-    <div class="modal" id="new-occurrence-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Nova Ocorrência</h2>
-                <button class="modal-close" onclick="closeModal('new-occurrence-modal')">&times;</button>
-            </div>
-            <form id="new-occurrence-form" onsubmit="handleNewOccurrence(event)">
-                <div class="form-group">
-                    <label class="form-label">Tipo de Problema *</label>
-                    <select class="form-control" id="occurrence-type" required>
-                        <option value="">Selecione</option>
-                        <option value="buraco">Buraco na via</option>
-                        <option value="iluminacao">Iluminação pública</option>
-                        <option value="lixo">Lixo acumulado</option>
-                        <option value="drenagem">Problema de drenagem</option>
-                        <option value="acessibilidade">Falta de acessibilidade</option>
-                        <option value="outro">Outro</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Local *</label>
-                    <input type="text" class="form-control" id="occurrence-location" placeholder="Endereço completo" required>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label class="form-label">Latitude</label>
-                        <input type="text" class="form-control" id="occurrence-lat" value="-23.5505" readonly>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Longitude</label>
-                        <input type="text" class="form-control" id="occurrence-lng" value="-46.6333" readonly>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Descrição *</label>
-                    <textarea class="form-control" id="occurrence-description" rows="4" placeholder="Descreva o problema em detalhes..." required></textarea>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Foto (opcional)</label>
-                    <input type="file" class="form-control" id="occurrence-photo" accept="image/*">
-                </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%;">
-                    <i class="fas fa-paper-plane"></i> Enviar Ocorrência
-                </button>
-            </form>
-        </div>
-    </div>
-
-    <div class="modal" id="new-benefit-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Novo Benefício</h2>
-                <button class="modal-close" onclick="closeModal('new-benefit-modal')">&times;</button>
-            </div>
-            <form id="new-benefit-form" onsubmit="handleNewBenefit(event)">
-                <div class="form-group">
-                    <label class="form-label">Título do Benefício *</label>
-                    <input type="text" class="form-control" id="benefit-title" placeholder="Ex: Desconto de 20%" required>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Descrição *</label>
-                    <textarea class="form-control" id="benefit-description" rows="3" placeholder="Descreva o benefício..." required></textarea>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label class="form-label">Pontos necessários *</label>
-                        <input type="number" class="form-control" id="benefit-points" placeholder="500" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Quantidade disponível</label>
-                        <input type="number" class="form-control" id="benefit-quantity" placeholder="10">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Validade</label>
-                    <input type="date" class="form-control" id="benefit-expiry">
-                </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%;">
-                    <i class="fas fa-plus"></i> Criar Benefício
-                </button>
-            </form>
-        </div>
-    </div>
-
-    <div class="modal" id="map-modal">
-        <div class="modal-content" style="max-width: 1000px;">
-            <div class="modal-header">
-                <h2>Mapa Interativo de Ocorrências</h2>
-                <button class="modal-close" onclick="closeModal('map-modal')">&times;</button>
-            </div>
-            <div id="full-map" style="height: 500px; width: 100%;"></div>
-            <div style="margin-top: 1rem; display: flex; gap: 1rem; justify-content: center;">
-                <button class="btn btn-primary" onclick="centerMapOnUser()">
-                    <i class="fas fa-location-dot"></i> Minha localização
-                </button>
-                <button class="btn btn-outline" onclick="filterMap('nearby')">
-                    <i class="fas fa-filter"></i> Filtrar próximos
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal" id="ranking-modal">
-        <div class="modal-content" style="max-width: 800px;">
-            <div class="modal-header">
-                <h2>Ranking Completo de Cidadãos</h2>
-                <button class="modal-close" onclick="closeModal('ranking-modal')">&times;</button>
-            </div>
-            <div class="ranking-list" id="full-ranking-list">
-                <div class="ranking-item current-user">
-                    <div class="ranking-position top-8">8º</div>
-                    <div class="ranking-avatar">JS</div>
-                    <div class="ranking-info">
-                        <div class="ranking-name">João Silva <span style="color: var(--secondary);">(Você)</span></div>
-                        <div class="ranking-details">12 ocorrências • 1,450 pontos</div>
-                    </div>
-                    <div class="ranking-points">1,450</div>
-                </div>
-                <div class="ranking-item">
-                    <div class="ranking-position top-1">1º</div>
-                    <div class="ranking-avatar">MS</div>
-                    <div class="ranking-info">
-                        <div class="ranking-name">Maria Santos</div>
-                        <div class="ranking-details">28 ocorrências • 2,450 pontos</div>
-                    </div>
-                    <div class="ranking-points">2,450</div>
-                </div>
-                <div class="ranking-item">
-                    <div class="ranking-position top-2">2º</div>
-                    <div class="ranking-avatar">PO</div>
-                    <div class="ranking-info">
-                        <div class="ranking-name">Pedro Oliveira</div>
-                        <div class="ranking-details">24 ocorrências • 2,120 pontos</div>
-                    </div>
-                    <div class="ranking-points">2,120</div>
-                </div>
-                <div class="ranking-item">
-                    <div class="ranking-position top-3">3º</div>
-                    <div class="ranking-avatar">AC</div>
-                    <div class="ranking-info">
-                        <div class="ranking-name">Ana Costa</div>
-                        <div class="ranking-details">21 ocorrências • 1,980 pontos</div>
-                    </div>
-                    <div class="ranking-points">1,980</div>
-                </div>
-                <div class="ranking-item">
-                    <div class="ranking-position">4º</div>
-                    <div class="ranking-avatar">LF</div>
-                    <div class="ranking-info">
-                        <div class="ranking-name">Lucas Ferreira</div>
-                        <div class="ranking-details">19 ocorrências • 1,870 pontos</div>
-                    </div>
-                    <div class="ranking-points">1,870</div>
-                </div>
-                <div class="ranking-item">
-                    <div class="ranking-position">5º</div>
-                    <div class="ranking-avatar">CM</div>
-                    <div class="ranking-info">
-                        <div class="ranking-name">Carla Mendes</div>
-                        <div class="ranking-details">18 ocorrências • 1,820 pontos</div>
-                    </div>
-                    <div class="ranking-points">1,820</div>
-                </div>
-                <div class="ranking-item">
-                    <div class="ranking-position">6º</div>
-                    <div class="ranking-avatar">RS</div>
-                    <div class="ranking-info">
-                        <div class="ranking-name">Roberto Santos</div>
-                        <div class="ranking-details">16 ocorrências • 1,650 pontos</div>
-                    </div>
-                    <div class="ranking-points">1,650</div>
-                </div>
-                <div class="ranking-item">
-                    <div class="ranking-position">7º</div>
-                    <div class="ranking-avatar">FP</div>
-                    <div class="ranking-info">
-                        <div class="ranking-name">Fernanda Paula</div>
-                        <div class="ranking-details">14 ocorrências • 1,520 pontos</div>
-                    </div>
-                    <div class="ranking-points">1,520</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal" id="benefit-details-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Detalhes do Benefício</h2>
-                <button class="modal-close" onclick="closeModal('benefit-details-modal')">&times;</button>
-            </div>
-            <div id="benefit-details-content">
-                <!-- Conteúdo será preenchido dinamicamente -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-grid">
@@ -2404,13 +3491,12 @@
             </div>
 
             <div class="footer-bottom">
-                &copy; 2023 Conecta Cidadão. Todos os direitos reservados. Versão 4.0
+                &copy; 2023 Conecta Cidadão. Todos os direitos reservados. Versão 5.0
             </div>
         </div>
     </footer>
 
     <script>
-        // Estado da aplicação
         const appState = {
             currentScreen: 'home',
             currentUser: null,
@@ -2420,10 +3506,19 @@
             notifications: 3,
             points: 1450,
             occurrences: 12,
-            rank: 8
+            rank: 8,
+            level: 5,
+            achievements: [],
+            friends: [],
+            settings: {
+                twoFA: false,
+                smsVerification: true,
+                emailNotifications: true,
+                pushNotifications: true,
+                smsNotifications: false
+            }
         };
 
-        // Elementos do DOM
         const screens = document.querySelectorAll('.screen');
         const navLinks = document.querySelectorAll('.nav-link');
         const authButtons = document.getElementById('auth-buttons');
@@ -2431,85 +3526,16 @@
         const userName = document.getElementById('user-name');
         const userRole = document.getElementById('user-role');
         const userAvatar = document.getElementById('user-avatar');
-        const userNameDisplay = document.getElementById('user-name-display');
         const loginBtn = document.getElementById('login-btn');
         const registerBtn = document.getElementById('register-btn');
         const dashboardLink = document.getElementById('dashboard-link');
+        const profileLink = document.getElementById('profile-link');
+        const achievementsLink = document.getElementById('achievements-link');
+        const settingsLink = document.getElementById('settings-link');
         const logoutLink = document.getElementById('logout-link');
         const notificationsLink = document.getElementById('notifications-link');
 
-        // Inicialização dos gráficos
-        function initCharts() {
-            // Gráfico de engajamento do parceiro
-            const partnerCtx = document.getElementById('partner-engagement-chart')?.getContext('2d');
-            if (partnerCtx) {
-                appState.charts.partner = new Chart(partnerCtx, {
-                    type: 'line',
-                    data: {
-                        labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
-                        datasets: [{
-                            label: 'Resgates',
-                            data: [12, 19, 25, 27, 32, 47],
-                            borderColor: '#00A896',
-                            backgroundColor: 'rgba(0, 168, 150, 0.1)',
-                            tension: 0.4
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false
-                    }
-                });
-            }
-
-            // Gráfico de regiões
-            const regionCtx = document.getElementById('region-chart')?.getContext('2d');
-            if (regionCtx) {
-                appState.charts.region = new Chart(regionCtx, {
-                    type: 'doughnut',
-                    data: {
-                        labels: ['Zona Norte', 'Zona Sul', 'Zona Leste', 'Zona Oeste', 'Centro'],
-                        datasets: [{
-                            data: [45, 38, 52, 29, 18],
-                            backgroundColor: [
-                                '#00A896',
-                                '#FF6B35',
-                                '#3498DB',
-                                '#F39C12',
-                                '#9B59B6'
-                            ]
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false
-                    }
-                });
-            }
-
-            // Gráfico de auditoria
-            const auditCtx = document.getElementById('audit-chart')?.getContext('2d');
-            if (auditCtx) {
-                appState.charts.audit = new Chart(auditCtx, {
-                    type: 'bar',
-                    data: {
-                        labels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
-                        datasets: [{
-                            label: 'Ações',
-                            data: [65, 72, 84, 78, 92, 45, 23],
-                            backgroundColor: '#00A896'
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false
-                    }
-                });
-            }
-        }
-
-        // Função para mostrar tela
-        window.showScreen = function(screenId) {
+        function showScreen(screenId) {
             screens.forEach(screen => {
                 screen.classList.remove('active');
             });
@@ -2527,7 +3553,6 @@
                     }
                 });
 
-                // Atualizar título da página
                 const titles = {
                     'home': 'Início',
                     'about': 'Quem Somos',
@@ -2537,18 +3562,22 @@
                     'user-dashboard': 'Meu Painel',
                     'partner-dashboard': 'Painel Parceiro',
                     'institution-dashboard': 'Painel Institucional',
-                    'admin-dashboard': 'Painel Admin'
+                    'admin-dashboard': 'Painel Admin',
+                    'profile': 'Perfil',
+                    'settings': 'Configurações'
                 };
                 document.title = `Conecta Cidadão - ${titles[screenId] || 'Plataforma'}`;
 
-                // Inicializar mapas se necessário
                 if (screenId === 'home' && !appState.maps.home) {
                     setTimeout(() => initMap('home-map-element'), 100);
                 }
-            }
-        };
 
-        // Funções de mapa
+                if (screenId === 'profile' && appState.currentUser) {
+                    updateProfileUI();
+                }
+            }
+        }
+
         function initMap(elementId) {
             const mapElement = document.getElementById(elementId);
             if (!mapElement) return;
@@ -2558,7 +3587,6 @@
                 attribution: '© OpenStreetMap contributors'
             }).addTo(map);
 
-            // Adicionar marcadores de exemplo
             const locations = [
                 { lat: -23.5505, lng: -46.6333, type: 'Buraco', status: 'Pendente' },
                 { lat: -23.5515, lng: -46.6343, type: 'Iluminação', status: 'Resolvido' },
@@ -2584,8 +3612,7 @@
             return map;
         }
 
-        // Funções de modal
-        window.openNewOccurrenceModal = function() {
+        function openNewOccurrenceModal() {
             if (!appState.currentUser) {
                 Swal.fire({
                     title: 'Faça login primeiro!',
@@ -2604,31 +3631,30 @@
                 return;
             }
             document.getElementById('new-occurrence-modal').classList.add('active');
-        };
+        }
 
-        window.openNewBenefitModal = function() {
+        function openNewBenefitModal() {
             document.getElementById('new-benefit-modal').classList.add('active');
-        };
+        }
 
-        window.openMapModal = function() {
+        function openMapModal() {
             document.getElementById('map-modal').classList.add('active');
             setTimeout(() => {
                 if (!appState.maps.fullMap) {
                     appState.maps.fullMap = initMap('full-map');
                 }
             }, 100);
-        };
+        }
 
-        window.showFullRanking = function() {
+        function showFullRanking() {
             document.getElementById('ranking-modal').classList.add('active');
-        };
+        }
 
-        window.closeModal = function(modalId) {
+        function closeModal(modalId) {
             document.getElementById(modalId).classList.remove('active');
-        };
+        }
 
-        // Funções de autenticação
-        window.selectRole = function(role) {
+        function selectRole(role) {
             document.querySelectorAll('.role-card').forEach(card => {
                 card.style.borderColor = 'var(--gray-200)';
                 card.style.background = 'var(--white)';
@@ -2638,9 +3664,9 @@
                 selectedCard.style.borderColor = 'var(--secondary)';
                 selectedCard.style.background = 'rgba(0, 168, 150, 0.05)';
             }
-        };
+        }
 
-        window.handleLogin = function(event) {
+        function handleLogin(event) {
             event.preventDefault();
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
@@ -2668,7 +3694,6 @@
                 return;
             }
 
-            // Simular login
             Swal.fire({
                 title: 'Login realizado com sucesso!',
                 text: `Bem-vindo, ${email.split('@')[0]}!`,
@@ -2678,9 +3703,9 @@
             }).then(() => {
                 loginUser(role, email.split('@')[0]);
             });
-        };
+        }
 
-        window.handleRegister = function(event) {
+        function handleRegister(event) {
             event.preventDefault();
             const name = document.getElementById('reg-name').value;
             const email = document.getElementById('reg-email').value;
@@ -2706,9 +3731,9 @@
             }).then(() => {
                 loginUser('user', name);
             });
-        };
+        }
 
-        window.handleRecovery = function(event) {
+        function handleRecovery(event) {
             event.preventDefault();
             const email = document.getElementById('recovery-email').value;
             
@@ -2720,7 +3745,7 @@
             }).then(() => {
                 showLoginForm();
             });
-        };
+        }
 
         function loginUser(role, name) {
             const userNames = {
@@ -2749,8 +3774,8 @@
             userRole.textContent = roleNames[role];
             userAvatar.textContent = userNames[role].charAt(0);
             
-            if (userNameDisplay) {
-                userNameDisplay.textContent = userNames[role].split(' ')[0];
+            if (document.getElementById('user-name-display')) {
+                document.getElementById('user-name-display').textContent = userNames[role].split(' ')[0];
             }
 
             const dashboards = {
@@ -2762,10 +3787,11 @@
             
             showScreen(dashboards[role]);
             
-            // Inicializar gráficos específicos
             if (role === 'partner' || role === 'institution' || role === 'admin') {
                 setTimeout(initCharts, 100);
             }
+
+            updateProfileUI();
         }
 
         function logoutUser() {
@@ -2798,8 +3824,7 @@
             });
         }
 
-        // Funções de ação rápida
-        window.showQuickAccess = function(action) {
+        function showQuickAccess(action) {
             if (!appState.currentUser) {
                 Swal.fire({
                     title: 'Faça login primeiro!',
@@ -2817,18 +3842,18 @@
             };
             
             if (actions[action]) actions[action]();
-        };
+        }
 
-        window.showUserRecords = function() {
+        function showUserRecords() {
             Swal.fire({
                 title: 'Meus Registros',
                 text: 'Exibindo todas as suas ocorrências',
                 icon: 'info',
                 confirmButtonColor: '#00A896'
             });
-        };
+        }
 
-        window.viewOccurrenceDetails = function(id) {
+        function viewOccurrenceDetails(id) {
             Swal.fire({
                 title: `Ocorrência ${id}`,
                 html: `
@@ -2843,9 +3868,9 @@
                 `,
                 confirmButtonColor: '#00A896'
             });
-        };
+        }
 
-        window.showPointsHistory = function() {
+        function showPointsHistory() {
             Swal.fire({
                 title: 'Histórico de Pontos',
                 html: `
@@ -2862,9 +3887,9 @@
                 `,
                 confirmButtonColor: '#00A896'
             });
-        };
+        }
 
-        window.showBenefits = function() {
+        function showBenefits() {
             Swal.fire({
                 title: 'Benefícios Disponíveis',
                 html: `
@@ -2885,10 +3910,9 @@
                 `,
                 confirmButtonColor: '#00A896'
             });
-        };
+        }
 
-        // Funções do dashboard institucional
-        window.updateOccurrenceStatus = function(id, status) {
+        function updateOccurrenceStatus(id, status) {
             if (!status) return;
             
             const statusMap = {
@@ -2911,9 +3935,9 @@
                     showConfirmButton: false
                 });
             }
-        };
+        }
 
-        window.sendBroadcast = function() {
+        function sendBroadcast() {
             const message = document.getElementById('broadcast-message').value;
             if (!message) {
                 Swal.fire({
@@ -2932,7 +3956,6 @@
                 confirmButtonColor: '#00A896'
             });
 
-            // Adicionar à timeline
             const timeline = document.getElementById('message-timeline');
             const newMessage = document.createElement('div');
             newMessage.className = 'timeline-item';
@@ -2943,19 +3966,18 @@
             `;
             timeline.insertBefore(newMessage, timeline.firstChild);
             document.getElementById('broadcast-message').value = '';
-        };
+        }
 
-        // Funções do admin
-        window.showAdminSection = function(section) {
+        function showAdminSection(section) {
             document.getElementById('partnerships-section').classList.add('hidden');
             document.getElementById('users-section').classList.add('hidden');
             document.getElementById('denuncias-section').classList.add('hidden');
             document.getElementById('config-section').classList.add('hidden');
             
             document.getElementById(`${section}-section`).classList.remove('hidden');
-        };
+        }
 
-        window.approvePartnership = function(button) {
+        function approvePartnership(button) {
             Swal.fire({
                 title: 'Aprovar parceria?',
                 text: 'Esta ação irá converter o usuário em parceiro.',
@@ -2982,9 +4004,9 @@
                     });
                 }
             });
-        };
+        }
 
-        window.rejectPartnership = function(button) {
+        function rejectPartnership(button) {
             Swal.fire({
                 title: 'Recusar solicitação?',
                 text: 'Esta ação não pode ser desfeita.',
@@ -3011,9 +4033,9 @@
                     });
                 }
             });
-        };
+        }
 
-        window.viewPartnershipDetails = function(button) {
+        function viewPartnershipDetails(button) {
             const row = button.closest('tr');
             const company = row.cells[0].textContent;
             
@@ -3030,10 +4052,9 @@
                 `,
                 confirmButtonColor: '#00A896'
             });
-        };
+        }
 
-        // Handlers de formulários
-        window.handleNewOccurrence = function(event) {
+        function handleNewOccurrence(event) {
             event.preventDefault();
             
             Swal.fire({
@@ -3046,7 +4067,6 @@
 
             closeModal('new-occurrence-modal');
             
-            // Atualizar stats do usuário
             const occurrencesEl = document.getElementById('user-occurrences');
             if (occurrencesEl) {
                 occurrencesEl.textContent = parseInt(occurrencesEl.textContent) + 1;
@@ -3056,7 +4076,6 @@
                 pointsEl.textContent = (parseInt(pointsEl.textContent.replace(',', '')) + 50).toLocaleString();
             }
 
-            // Adicionar à timeline
             const timeline = document.getElementById('points-timeline');
             if (timeline) {
                 const newItem = document.createElement('div');
@@ -3068,9 +4087,9 @@
                 `;
                 timeline.insertBefore(newItem, timeline.firstChild);
             }
-        };
+        }
 
-        window.handleNewBenefit = function(event) {
+        function handleNewBenefit(event) {
             event.preventDefault();
             
             const title = document.getElementById('benefit-title').value;
@@ -3086,7 +4105,6 @@
 
             closeModal('new-benefit-modal');
             
-            // Adicionar à lista
             const benefitsList = document.getElementById('benefits-list');
             if (benefitsList) {
                 const newBenefit = document.createElement('div');
@@ -3105,14 +4123,13 @@
                 benefitsList.appendChild(newBenefit);
             }
             
-            // Atualizar contador
             const benefitsCount = document.getElementById('partner-benefits-count');
             if (benefitsCount) {
                 benefitsCount.textContent = parseInt(benefitsCount.textContent) + 1;
             }
-        };
+        }
 
-        window.handlePartnerRequest = function(event) {
+        function handlePartnerRequest(event) {
             event.preventDefault();
             
             Swal.fire({
@@ -3124,10 +4141,9 @@
                 document.getElementById('partner-form').classList.add('hidden');
                 document.getElementById('partner-confirmation').classList.remove('hidden');
             });
-        };
+        }
 
-        // Funções de utilidade
-        window.filterMap = function(filter) {
+        function filterMap(filter) {
             const filterNames = {
                 'all': 'Todas as ocorrências',
                 'today': 'Últimas 24h',
@@ -3142,9 +4158,9 @@
                 timer: 1500,
                 showConfirmButton: false
             });
-        };
+        }
 
-        window.centerMapOnUser = function() {
+        function centerMapOnUser() {
             Swal.fire({
                 title: 'Localizando...',
                 text: 'Buscando sua localização',
@@ -3152,9 +4168,9 @@
                 timer: 1500,
                 showConfirmButton: false
             });
-        };
+        }
 
-        window.generateReport = function(type) {
+        function generateReport(type) {
             const reportNames = {
                 'weekly': 'Relatório Semanal',
                 'monthly': 'Relatório Mensal'
@@ -3175,9 +4191,9 @@
                     showConfirmButton: false
                 });
             });
-        };
+        }
 
-        window.saveConfig = function() {
+        function saveConfig() {
             Swal.fire({
                 title: 'Configurações salvas!',
                 text: 'As alterações foram aplicadas com sucesso.',
@@ -3185,27 +4201,27 @@
                 timer: 2000,
                 showConfirmButton: false
             });
-        };
+        }
 
-        window.showTerms = function() {
+        function showTerms() {
             Swal.fire({
                 title: 'Termos de Uso',
                 text: 'Ao utilizar o Conecta Cidadão, você concorda com nossos termos de uso e políticas de privacidade.',
                 icon: 'info',
                 confirmButtonColor: '#00A896'
             });
-        };
+        }
 
-        window.showPrivacy = function() {
+        function showPrivacy() {
             Swal.fire({
                 title: 'Política de Privacidade',
                 text: 'Seus dados são protegidos e utilizados apenas para melhorar sua experiência na plataforma.',
                 icon: 'info',
                 confirmButtonColor: '#00A896'
             });
-        };
+        }
 
-        window.showFAQ = function() {
+        function showFAQ() {
             Swal.fire({
                 title: 'Perguntas Frequentes',
                 html: `
@@ -3222,9 +4238,9 @@
                 `,
                 confirmButtonColor: '#00A896'
             });
-        };
+        }
 
-        window.showContact = function() {
+        function showContact() {
             Swal.fire({
                 title: 'Fale Conosco',
                 html: `
@@ -3237,9 +4253,394 @@
                 `,
                 confirmButtonColor: '#00A896'
             });
-        };
+        }
 
-        // Event Listeners
+        function initCharts() {
+            const partnerCtx = document.getElementById('partner-engagement-chart')?.getContext('2d');
+            if (partnerCtx) {
+                appState.charts.partner = new Chart(partnerCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+                        datasets: [{
+                            label: 'Resgates',
+                            data: [12, 19, 25, 27, 32, 47],
+                            borderColor: '#00A896',
+                            backgroundColor: 'rgba(0, 168, 150, 0.1)',
+                            tension: 0.4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false
+                    }
+                });
+            }
+
+            const regionCtx = document.getElementById('region-chart')?.getContext('2d');
+            if (regionCtx) {
+                appState.charts.region = new Chart(regionCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Zona Norte', 'Zona Sul', 'Zona Leste', 'Zona Oeste', 'Centro'],
+                        datasets: [{
+                            data: [45, 38, 52, 29, 18],
+                            backgroundColor: [
+                                '#00A896',
+                                '#FF6B35',
+                                '#3498DB',
+                                '#F39C12',
+                                '#9B59B6'
+                            ]
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false
+                    }
+                });
+            }
+
+            const auditCtx = document.getElementById('audit-chart')?.getContext('2d');
+            if (auditCtx) {
+                appState.charts.audit = new Chart(auditCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
+                        datasets: [{
+                            label: 'Ações',
+                            data: [65, 72, 84, 78, 92, 45, 23],
+                            backgroundColor: '#00A896'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false
+                    }
+                });
+            }
+        }
+
+        function showProfile() {
+            showScreen('profile');
+            updateProfileUI();
+        }
+
+        function updateProfileUI() {
+            if (!appState.currentUser) return;
+
+            const elements = {
+                'profile-fullname': appState.currentUser.name,
+                'profile-points': appState.points.toLocaleString(),
+                'profile-occurrences': appState.occurrences,
+                'profile-rank': appState.rank + 'º',
+                'profile-level': appState.level,
+                'profile-avatar': appState.currentUser.name.charAt(0)
+            };
+
+            for (const [id, value] of Object.entries(elements)) {
+                const el = document.getElementById(id);
+                if (el) el.textContent = value;
+            }
+
+            generateActivityCalendar();
+            initActivityChart();
+        }
+
+        function generateActivityCalendar() {
+            const calendar = document.getElementById('activity-calendar');
+            if (!calendar) return;
+
+            calendar.innerHTML = '';
+            for (let i = 0; i < 28; i++) {
+                const day = document.createElement('div');
+                day.className = 'calendar-day';
+                const level = Math.floor(Math.random() * 5) + 1;
+                day.setAttribute('data-level', level);
+                calendar.appendChild(day);
+            }
+        }
+
+        function initActivityChart() {
+            const ctx = document.getElementById('activity-chart')?.getContext('2d');
+            if (!ctx) return;
+
+            appState.charts.activity = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
+                    datasets: [{
+                        label: 'Atividade',
+                        data: [3, 5, 2, 4, 6, 2, 1],
+                        borderColor: '#00A896',
+                        backgroundColor: 'rgba(0, 168, 150, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                display: false
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function switchProfileTab(tab) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelector(`.tab[onclick="switchProfileTab('${tab}')"]`).classList.add('active');
+
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.getElementById(`profile-${tab}`).classList.add('active');
+        }
+
+        function editProfile() {
+            document.getElementById('edit-profile-modal').classList.add('active');
+        }
+
+        function saveProfile(event) {
+            event.preventDefault();
+            
+            Swal.fire({
+                title: 'Perfil atualizado!',
+                text: 'Suas informações foram salvas com sucesso.',
+                icon: 'success',
+                timer: 2000,
+                showConfirmButton: false
+            });
+
+            closeModal('edit-profile-modal');
+            
+            const newName = document.getElementById('edit-name').value;
+            if (appState.currentUser) {
+                appState.currentUser.name = newName;
+                document.getElementById('profile-fullname').textContent = newName;
+                document.getElementById('user-name').textContent = newName;
+                document.getElementById('user-avatar').textContent = newName.charAt(0);
+                document.getElementById('profile-avatar').textContent = newName.charAt(0);
+            }
+        }
+
+        function showSetting(setting) {
+            const settingsMap = {
+                'account': 'Configurações de Conta',
+                'notifications': 'Configurações de Notificações',
+                'privacy': 'Configurações de Privacidade',
+                'appearance': 'Configurações de Aparência',
+                'language': 'Configurações de Idioma',
+                'accessibility': 'Configurações de Acessibilidade'
+            };
+
+            Swal.fire({
+                title: settingsMap[setting],
+                text: `Esta seção está em desenvolvimento. Em breve você poderá personalizar suas ${settingsMap[setting].toLowerCase()}.`,
+                icon: 'info',
+                confirmButtonColor: '#00A896'
+            });
+        }
+
+        function toggle2FA(element) {
+            element.classList.toggle('active');
+            appState.settings.twoFA = element.classList.contains('active');
+            
+            Swal.fire({
+                title: appState.settings.twoFA ? '2FA Ativado' : '2FA Desativado',
+                text: appState.settings.twoFA ? 'Autenticação de dois fatores ativada com sucesso.' : 'Autenticação de dois fatores desativada.',
+                icon: 'success',
+                timer: 1500,
+                showConfirmButton: false
+            });
+        }
+
+        function toggleSMS(element) {
+            element.classList.toggle('active');
+            appState.settings.smsVerification = element.classList.contains('active');
+            
+            Swal.fire({
+                title: appState.settings.smsVerification ? 'Verificação SMS Ativada' : 'Verificação SMS Desativada',
+                text: appState.settings.smsVerification ? 'Você receberá códigos via SMS.' : 'Verificação por SMS desativada.',
+                icon: 'success',
+                timer: 1500,
+                showConfirmButton: false
+            });
+        }
+
+        function toggleNotification(type, element) {
+            element.classList.toggle('active');
+            const state = element.classList.contains('active');
+            
+            const types = {
+                'email': 'Notificações por e-mail',
+                'push': 'Notificações push',
+                'sms': 'Notificações por SMS'
+            };
+
+            appState.settings[`${type}Notifications`] = state;
+
+            Swal.fire({
+                title: state ? 'Ativado' : 'Desativado',
+                text: `${types[type]} foram ${state ? 'ativadas' : 'desativadas'}.`,
+                icon: 'success',
+                timer: 1500,
+                showConfirmButton: false
+            });
+        }
+
+        function changePassword() {
+            Swal.fire({
+                title: 'Alterar Senha',
+                html: `
+                    <input type="password" id="current-password" class="swal2-input" placeholder="Senha atual">
+                    <input type="password" id="new-password" class="swal2-input" placeholder="Nova senha">
+                    <input type="password" id="confirm-password" class="swal2-input" placeholder="Confirmar nova senha">
+                `,
+                confirmButtonText: 'Alterar',
+                confirmButtonColor: '#00A896',
+                showCancelButton: true,
+                cancelButtonText: 'Cancelar',
+                preConfirm: () => {
+                    const current = document.getElementById('current-password').value;
+                    const newPass = document.getElementById('new-password').value;
+                    const confirm = document.getElementById('confirm-password').value;
+
+                    if (!current || !newPass || !confirm) {
+                        Swal.showValidationMessage('Preencha todos os campos');
+                        return false;
+                    }
+
+                    if (newPass !== confirm) {
+                        Swal.showValidationMessage('As novas senhas não coincidem');
+                        return false;
+                    }
+
+                    return true;
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: 'Senha alterada!',
+                        text: 'Sua senha foi atualizada com sucesso.',
+                        icon: 'success',
+                        timer: 2000,
+                        showConfirmButton: false
+                    });
+                }
+            });
+        }
+
+        function deactivateAccount() {
+            Swal.fire({
+                title: 'Desativar conta?',
+                text: 'Esta ação é irreversível. Todos os seus dados serão perdidos.',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#E74C3C',
+                cancelButtonColor: '#6C757D',
+                confirmButtonText: 'Sim, desativar',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: 'Conta desativada',
+                        text: 'Sua conta foi desativada com sucesso.',
+                        icon: 'info',
+                        timer: 2000,
+                        showConfirmButton: false
+                    }).then(() => {
+                        logoutUser();
+                    });
+                }
+            });
+        }
+
+        function exportData(format) {
+            const formats = {
+                'csv': 'CSV',
+                'pdf': 'PDF',
+                'json': 'JSON',
+                'all': 'Pacote completo'
+            };
+
+            Swal.fire({
+                title: 'Exportando dados',
+                text: `Seu relatório em ${formats[format]} está sendo gerado...`,
+                icon: 'info',
+                timer: 2000,
+                showConfirmButton: false
+            }).then(() => {
+                Swal.fire({
+                    title: 'Exportação concluída!',
+                    text: `Seus dados em ${formats[format]} foram baixados.`,
+                    icon: 'success',
+                    timer: 1500,
+                    showConfirmButton: false
+                });
+            });
+        }
+
+        function showFriends() {
+            Swal.fire({
+                title: 'Meus Amigos',
+                html: `
+                    <div style="text-align: left;">
+                        <div style="display: flex; align-items: center; gap: 1rem; padding: 0.5rem 0;">
+                            <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #00A896, #028476); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">MS</div>
+                            <div style="flex: 1;">
+                                <strong>Maria Santos</strong>
+                                <div style="font-size: 0.875rem; color: #6C757D;">2,450 pontos</div>
+                            </div>
+                            <i class="fas fa-comment" style="color: #00A896;"></i>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1rem; padding: 0.5rem 0;">
+                            <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #00A896, #028476); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">PO</div>
+                            <div style="flex: 1;">
+                                <strong>Pedro Oliveira</strong>
+                                <div style="font-size: 0.875rem; color: #6C757D;">2,120 pontos</div>
+                            </div>
+                            <i class="fas fa-comment" style="color: #00A896;"></i>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1rem; padding: 0.5rem 0;">
+                            <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #00A896, #028476); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">AC</div>
+                            <div style="flex: 1;">
+                                <strong>Ana Costa</strong>
+                                <div style="font-size: 0.875rem; color: #6C757D;">1,980 pontos</div>
+                            </div>
+                            <i class="fas fa-comment" style="color: #00A896;"></i>
+                        </div>
+                    </div>
+                `,
+                confirmButtonColor: '#00A896',
+                confirmButtonText: 'Fechar'
+            });
+        }
+
+        function downloadQRCode() {
+            Swal.fire({
+                title: 'QR Code baixado!',
+                text: 'Seu código foi salvo na galeria.',
+                icon: 'success',
+                timer: 1500,
+                showConfirmButton: false
+            });
+        }
+
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -3278,6 +4679,25 @@
             document.getElementById('user-menu').classList.remove('active');
         });
 
+        profileLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            showProfile();
+            document.getElementById('user-menu').classList.remove('active');
+        });
+
+        achievementsLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            showProfile();
+            switchProfileTab('achievements');
+            document.getElementById('user-menu').classList.remove('active');
+        });
+
+        settingsLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            showScreen('settings');
+            document.getElementById('user-menu').classList.remove('active');
+        });
+
         notificationsLink.addEventListener('click', (e) => {
             e.preventDefault();
             Swal.fire({
@@ -3310,7 +4730,6 @@
             document.getElementById('user-menu').classList.remove('active');
         });
 
-        // Links de autenticação
         document.getElementById('forgot-password').addEventListener('click', (e) => {
             e.preventDefault();
             showRecoveryForm();
@@ -3321,7 +4740,6 @@
             showLoginForm();
         });
 
-        // Funções de formulário de autenticação
         function showLoginForm() {
             document.getElementById('auth-title').textContent = 'Login';
             document.getElementById('login-form').classList.remove('hidden');
@@ -3346,7 +4764,6 @@
             document.getElementById('role-selection').classList.add('hidden');
         }
 
-        // Fechar modais clicando fora
         document.querySelectorAll('.modal').forEach(modal => {
             modal.addEventListener('click', (e) => {
                 if (e.target === modal) {
@@ -3355,7 +4772,6 @@
             });
         });
 
-        // Inicialização
         showScreen('home');
         showLoginForm();
     </script>
